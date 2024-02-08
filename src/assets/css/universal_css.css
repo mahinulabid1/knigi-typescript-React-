@@ -1,0 +1,216 @@
+@import"https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,300;1,700&display=swap";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+.text-center{
+    text-align:center;
+}
+
+.center-horizontally {
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.center-vertically {
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+
+.center-middle {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+.transition {
+    -o-transition: all .4s;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    transition: all .4s
+}
+
+html,
+body {
+    overflow-x: hidden
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    color: #202020;
+    font-size: 20px
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        font-size: 16px
+    }
+}
+
+body a {
+    text-decoration: none
+}
+
+body header {
+    overflow: hidden
+}
+
+.bound-navigation {
+    padding: 0 80px
+}
+
+@media screen and (max-width: 1000px) {
+    .bound-navigation {
+        padding: 0 50px
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .bound-navigation {
+        padding: 0 15px
+    }
+}
+
+.bound-padding {
+    padding: 0 200px
+}
+
+@media screen and (max-width: 1250px) {
+    .bound-padding {
+        padding: 0 50px
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .bound-padding {
+        padding: 0 40px
+    }
+}
+
+@media screen and (max-width: 500px) {copyright-text
+    .bound-padding {
+        padding: 0 15px
+    }
+}
+
+.flex {
+    display: flex
+}
+
+.flex-s-b {
+    justify-content: space-between
+}
+
+.flex-s-a {
+    justify-content: space-around
+}
+
+.flex-s-e {
+    justify-content: space-evenly
+}
+
+.flex-cen {
+    justify-content: center
+}
+
+.flex-wrap {
+    flex-wrap: wrap
+}
+
+.flex-align-center {
+    align-items: center
+}
+
+.d-none {
+    display: none
+}
+
+.cursorPointer {
+    cursor : pointer ;
+}
+
+h1 {
+    font-size: 60px
+}
+
+@media screen and (max-width: 1000px) {
+    h1 {
+        font-size: 40px
+    }
+}
+
+h2 {
+    font-size: 50px
+}
+
+@media screen and (max-width: 1000px) {
+    h2 {
+        font-size: 35px
+    }
+}
+
+h3 {
+    font-size: 40px
+}
+
+@media screen and (max-width: 1000px) {
+    h3 {
+        font-size: 30px
+    }
+}
+
+h4 {
+    font-size: 36px
+}
+
+@media screen and (max-width: 1000px) {
+    h4 {
+        font-size: 29px
+    }
+}
+
+
+@keyframes slideDown {
+    from {
+        top: -100%
+    }
+
+    to {
+        top: 0
+    }
+}
+
+@keyframes slideUp {
+    from {
+        top: 0%
+    }
+
+    to {
+        top: -100%
+    }
+}
+
+.slideUp {
+    animation: slideUp .4s linear
+}
+
+.slideDown {
+    animation: slideDown .4s linear
+}
+/*# sourceMappingURL=universal_css.css.map */
