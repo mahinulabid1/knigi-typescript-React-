@@ -1,0 +1,69 @@
+.cart_holder {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    box-shadow: 7px 7px 10px rgba(0,0,0,.212);
+    width: 350px;
+    height: 80vh;
+    background: #fff;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.cartCloseBtn{
+    padding: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.cartOverview {
+    padding: 20px 0 20px 10px;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.cartOverview span {
+    font-size: 14px;
+    color: rgba(0,0,0,.692);
+    margin-left: 10px;
+}
+
+.cartItem{
+    padding: 0 15px;
+    margin-bottom: 5px;
+    background: rgba(0,0,0,.082);
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(0,0,0,.814);  
+}
+
+
+/* proceed to checkout button */
+.cart_holder>div:last-child {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    line-height: 60px;
+    text-align: center;
+}
+
+.cart_holder>div:last-child a {
+    letter-spacing: 3px;
+    font-weight: 700;
+    font-size: 14px;
+    width: 100%;
+    display: block;
+}
+
+.cart_holder>div:last-child a:link, 
+.cart_holder>div:last-child a:visited {
+    color: #fff;
+    background: green;
+}
+
+.cart_holder>div:last-child a:hover,
+.cart_holder>div:last-child a:active{
+    background: rgba(0, 128, 0, 0.753);
+}

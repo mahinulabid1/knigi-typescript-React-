@@ -1,0 +1,124 @@
+.itemContainer{
+    margin-top: 100px;
+}
+
+.itemContainer > div:first-of-type {
+    width :50%;
+}
+
+.itemContainer > div:last-of-type {
+    width :48%;
+}
+
+.content_header {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.price_tag{
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.product_content {
+    font-size: 23px;
+    width: 80%;
+    line-height: 160%;
+    margin-bottom: 80px;
+}
+
+.cart_option {
+    user-select: none;
+}
+
+.cart_note {
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    font-size: 19px;
+}
+
+.add_cartBtn, 
+.numberFunction {
+    line-height: 45px;
+    display: inline-block;
+    margin-bottom: 50px;
+    border: 2px solid green;
+    font-weight: 700;
+}
+
+.add_cartBtn {
+    font-size: 20px;
+    padding: 10px 40px;
+    margin-right: 20px;
+}
+
+.add_cartBtn:link, 
+.add_cartBtn:visited {
+    color: green;
+}
+
+.add_cartBtn:hover,
+.add_cartBtn:active{
+    background: green;
+    color: white;
+}
+
+.numberFunction {
+    color: green;
+    font-size: 22px;
+    padding: 10px 0;
+}
+
+
+.plus, .minus {
+    display: inline-block;
+    padding: 0 30px;
+    cursor: pointer;
+}
+
+.grey_box{
+    width: 100%;
+    background: rgba(185,185,185,.52);
+    height: 600px;
+    position: relative;
+    margin-top: 50px;
+}
+
+.grey_box img{
+    object-fit: cover;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    box-shadow: 6px 6px 60px 50px rgba(0,0,0,.24);
+}
+
+/* specs of books section */
+.specs_of_books {
+    width: 60%;
+}
+
+.specs_item {
+    width: 250px;
+    margin-top: 20px;
+}
+
+.specs_item_header {
+    font-size: 19px;
+}
+
+.specs_content{
+    font-size: 18px;
+    line-height: 170%;
+}
+
+.info_link:link, 
+.info_link:visited {
+    color: green;
+    border-bottom: 1px solid green;
+}

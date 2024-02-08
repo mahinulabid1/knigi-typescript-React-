@@ -1,0 +1,40 @@
+.blogPost > div {
+    margin-top: 30px;
+}
+
+.blogPostItems{
+    width: 200px;
+    margin-left: 10px;
+}
+
+.blogPostItems img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.blogPostItems > div h4 {
+    font-size: 17px;
+}
+
+.blogPostItems > div p {
+    font-size: 14px;
+}
+
+
+.visitBlogBtn {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 29px;
+}
+
+.visitBlogBtn a:link,
+.visitBlogBtn a:visited {
+    color: #1df075;
+    border-bottom: 1px solid #1df075;
+}
+
+.visitBlogBtn a:hover,
+.visitBlogBtn a:active {
+    border-bottom: 1px solid rgba(29, 240, 117, 0);
+    color: rgb(29, 240, 117);
+}

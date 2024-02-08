@@ -1,0 +1,98 @@
+.contentCard:hover .titleImageSection > div{ 
+    opacity: 1;
+}
+
+/* content */
+
+.contentCard{
+    width: 45%;
+    min-height: 450px;
+    margin: 0 15px 70px 0;
+}
+.titleImageSection{
+    position: relative;
+}
+
+.titleImageSection img{
+    object-fit: cover;
+    height: 330px;
+    width: 100%;
+}
+
+.titleImageSection > div{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.linkContainer{
+    position: absolute;
+    font-size: 30px;
+    color: #10ff80;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.linkContainer>a:link, 
+.linkContainer>a:visited {
+    color: #10ff80;
+}
+
+.linkContainer>a:hover, 
+.linkContainer>a:active {
+    border-bottom: 1px solid rgb(16, 255, 128);
+}
+
+.contentText {
+    padding: 5px 20px;
+    position: relative;
+    top: -7px;
+}
+
+.contentText h6 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: rgba(58,56,56,.641);
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.contentText a {
+    margin-bottom: 10px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.contentText p {
+    font-size: 16px;
+}
+
+.contentText > span {
+    display: block;
+    position: absolute;
+    bottom: -30px;
+    right: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: rgba(0,0,0,.774);
+}
+
+.contentText a:link, 
+.contentText a:visited, 
+.contentText a:hover, 
+.contentText a:active {
+    color: #000;
+    border-bottom: 2px solid green;
+}

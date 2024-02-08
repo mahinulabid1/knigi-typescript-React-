@@ -1,0 +1,37 @@
+.blogSideBar {
+    padding: 40px 100px;
+}
+
+.blogSideBar h3{
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.sideBarDesc{
+    font-size: 20px;
+}
+
+.sideBarButton:link,
+.sideBarButton:visited{
+    color: #fff;
+    background: green;
+    transition: all 0.4s;
+}
+
+.sideBarButton:hover,
+.sideBarButton:active{
+    background: rgb(0, 243, 0);
+}
+
+
+
+.sideBarButton{
+    text-align: center;
+    display: block;
+    font-weight: 700;
+    margin-bottom: 100px;
+    line-height: 60px;
+    width: 250px;
+    font-size: 16px;
+    margin-top: 20px;
+}

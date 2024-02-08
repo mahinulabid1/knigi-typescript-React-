@@ -1,0 +1,63 @@
+.header{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.137), rgba(0, 0, 0, 0.219)),url(images/shopallhero.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    position: relative;
+}
+
+.heroTextContainer{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+.heroTextContainer h1{
+    font-size: 90px;
+}
+
+.heroTextContainer a{
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    display: inline-Block;
+    margin-top: 10px;
+    padding: 20px 35px;
+    font-size: 20px;
+}
+
+.heroTextContainer a:link,
+.heroTextContainer a:visited{
+    color: #fff;
+    border: 4px solid #fff;
+}
+
+.heroTextContainer a:hover, 
+.heroTextContainer a:active{
+    color: black;
+    background: white;
+}
+
+.heroTextCorner{
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    position: absolute;
+    bottom: 5%;
+}
+
+.heroTextCorner:first-child{ 
+    left: 60px;
+}
+
+.heroTextCorner:last-child{
+    right: 60px;
+}

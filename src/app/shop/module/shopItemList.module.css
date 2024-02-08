@@ -1,0 +1,44 @@
+.product_link {
+    width: 45%;
+    margin-bottom: 70px;
+    display: block;
+}
+.product_link:hover{
+    transition: opacity 1.2s;
+    opacity: 0.5;
+    -webkit-transition: opacity 1.2s;
+    -moz-transition: opacity 1.2s;
+    -ms-transition: opacity 1.2s;
+    -o-transition: opacity 1.2s;
+}
+
+.image_grey_box {
+    width: 100%;
+    background: rgba(165,165,164,.582);
+    height: 400px;
+    position: relative;
+}
+
+/* grey box is technically image container */
+.image_grey_box img {
+    object-fit: cover;
+    height: 300px;
+    position: absolute;
+}
+
+.product_text {
+    padding: 20px 0;
+}
+
+
+.product_name {
+    font-size: 20px;
+    font-weight: 700;
+    color: rgba(0,0,0,.698);
+}
+
+.product_price {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 700;
+}

@@ -1,0 +1,114 @@
+.book_shop_separate {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+    z-index: 10;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: rgba(0,0,0,.199);
+}
+
+.container > a {
+    width: 25%;
+    transition: all .4s;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+}
+
+.container>a:link, 
+.container>a:visited {
+    color: #fff;
+}
+
+.container>a:hover,
+.container>a:active {
+    color: white;
+    background: rgb(255, 255, 255);
+}
+
+
+
+
+.image_container {
+    position: relative;
+    height: 100%;
+}
+
+.container>a:hover .image_container img {
+    opacity: 0;
+}
+
+.container>a:hover .image_container > div {
+    opacity: 1;
+}
+
+.image_container img {
+    object-fit: cover;
+    position: absolute;
+    height: 280px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.image_container > div{
+    opacity: 0;
+    font-weight: 700;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.image_container > div p {
+    color: rgba(0,0,0,.452);
+    font-size: 22px;
+}
+
+
+.shop_all_btn {
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: 700;
+    letter-spacing: 4px;
+    cursor: pointer;
+    transition: background .4s;
+    -webkit-transition: background .4s;
+    -moz-transition: background .4s;
+    -ms-transition: background .4s;
+    -o-transition: background .4s;
+}
+
+
+.shop_all_btn:link,
+.shop_all_btn:visited{
+    color: black;
+}
+
+.shop_all_btn:hover,
+.shop_all_btn:active{
+    color: white;
+    background: green;
+}
+
+.closeOnHover {
+    width: 100%;
+    height: 100%;
+}

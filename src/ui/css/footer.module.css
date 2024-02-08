@@ -1,0 +1,32 @@
+.footer {
+    margin: 40px 0;
+    font-weight: 700;
+    font-size: 17px;
+    color: rgba(0, 0, 0, .829)
+}
+
+@media screen and (max-width: 900px) {
+    .footer {
+        flex-direction: column;
+        text-align: center
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .footer div {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, .425)
+    }
+
+    .footer div:first-child {
+        border-top: 1px solid rgba(0, 0, 0, .425)
+    }
+}
+
+.footer a {
+    color: #000
+}
+
+.footer .copyright_text {
+    font-weight: 400
+}

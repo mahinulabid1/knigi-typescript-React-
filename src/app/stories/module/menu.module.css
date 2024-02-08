@@ -1,0 +1,24 @@
+.menu_container{   
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.menu_container > div {
+    padding: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0);
+}
+
+.menu_container a:link, 
+.menu_container a:visited {
+    color: #000;
+    border-bottom: 1px solid rgba(0,0,0,0);
+}
+
+.menu_container a:hover,
+.menu_container a:active{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.801);
+}
+
+.menu_container a:not(:last-child) {
+    margin-right: 30px;
+}

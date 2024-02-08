@@ -1,0 +1,31 @@
+.input,
+.textHolder{
+    height: 40px;
+    display: block;
+    width: 90%;
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(0,0,0,.74);
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid rgba(0,128,0,.315);
+}
+
+.input:focus{
+    outline: none;
+}
+
+.submitBtn{
+    border: none;
+    background: green;
+    color: #fff;
+    height: 50px;
+    font-size: 14px;
+    width: 250px;
+    font-weight: 700;
+    display: block;
+    cursor: pointer;
+    letter-spacing: 1px;
+    margin-top: 50px;
+}
+

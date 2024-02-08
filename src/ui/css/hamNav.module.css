@@ -1,0 +1,72 @@
+.nav_in_ham{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+    z-index: 10;
+}
+
+.nav_in_ham_content_container {
+    margin-top: 160px;
+    text-align: center;
+}
+
+
+
+.ham_link:not(:last-of-type):link, 
+.ham_link:not(:last-of-type):visited {
+    color: #000;
+    opacity: .6;
+}
+
+.ham_link:not(:last-of-type) {
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    display: block;
+    transition: background .4s;
+    -webkit-transition: background .4s;
+    -moz-transition: background .4s;
+    -ms-transition: background .4s;
+    -o-transition: background .4s;
+}
+
+.ham_link:not(:last-of-type):hover, 
+.ham_link:not(:last-of-type):active {
+    color: #000;
+    opacity: 1;
+    background: rgba(0,0,0,.158);
+}
+
+.request_interview_btn:link, 
+.request_interview_btn:visited {
+    background: green;
+    color: #fff;
+}
+
+.request_interview_btn:hover, 
+.request_interview_btn:active {
+    background: rgb(4, 199, 4);
+}
+
+.request_interview_btn {
+    font-weight: 700;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 40px;
+    font-size: 20px;
+    width: 270px;
+}
+
+.ham_close_btn {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    cursor: pointer;
+    padding: 8px 8px 2px 8px;
+    background: rgba(0, 0, 0, 0.19);
+    border-radius: 50%;
+}

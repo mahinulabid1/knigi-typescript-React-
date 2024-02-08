@@ -1,0 +1,67 @@
+.whiteSpaces {
+    margin-bottom :200px;
+}
+
+
+.heading{
+    margin: 50px 0;
+
+}
+
+.formContainer {
+    width: 400px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.formContainer input, .submit {
+    font-size: 18px;
+    border-radius: 10px;
+    margin-bottom : 10px;
+}
+
+.formContainer input {
+    width :100% ;
+    padding :5px 20px;
+    height: 60px;
+    border: 1px solid rgba(0, 0, 0, 0.233);
+
+}
+
+.formContainer input:focus{
+    outline:none;
+}
+
+.submit{
+    line-height: 60px;
+    border: none;
+    background: black;
+    color: rgba(255, 255, 255, 0.884);
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit:hover{
+    background: rgba(0, 0, 0, 0.178);
+    color: rgba(0, 0, 0, 0.884);
+}
+
+.formExtraLink button{
+    border: none;
+    background : none;
+    cursor : pointer;
+}
+
+.formExtraLink a{
+    color: black;
+    text-decoration : underline;
+}
+.formExtraLink a:hover{
+    text-decoration: none;
+}
+
+.formExtraLink a, 
+.formExtraLink button{ 
+    font-size: 15px;
+}

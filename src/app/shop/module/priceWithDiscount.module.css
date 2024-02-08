@@ -1,0 +1,12 @@
+.regular_price_before_discount, 
+.discounted_price{
+    margin-right: 10px;
+    color: black;
+}
+
+.regular_price_before_discount{
+    text-decoration: line-through;
+}
+.discounted_price {
+    color: green;
+}

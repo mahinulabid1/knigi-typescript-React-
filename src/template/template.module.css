@@ -1,0 +1,8 @@
+.flexItemOne {
+    width: 60%;
+}
+
+.flexItemTwo {
+    width: 40%;
+    position: relative;
+}

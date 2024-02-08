@@ -1,0 +1,44 @@
+.nav {
+    height: 100px;
+}
+
+.ham_button {
+    margin-right: 30px;
+}
+
+.shop_btn_image {
+    margin-left : 10px; 
+}
+
+.navLogo{
+    display:inline-block; 
+    align-self: center;
+    color:black;
+    font-size: 40px;
+}
+
+.searchIcon, .cartIcon {
+    margin-top: 2px;
+}
+
+.searchIcon {
+    margin-right: 10px;
+}
+
+.cartIcon{
+    margin-left: 7px;
+}
+
+.userBtn {
+    margin-right: 15px;
+}
+
+.userBtn a:link, 
+.userBtn a:visited{
+    color:black;
+}
+
+.userBtn a:hover, 
+.userBtn a:active{
+    text-decoration: underline;
+}
