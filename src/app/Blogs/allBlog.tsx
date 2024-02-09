@@ -1,3 +1,4 @@
+import { FC } from 'react'
 import styles from "./AllBlogs.module.css"
 import AllBlogsPartOne from "./module/blogsList"
 import Navigation from '@ui/Nav'
@@ -6,7 +7,7 @@ import Sidebar from "@ui/sideBar"
 import Template from "@template/template"
 
 
-const AllBlogs = ( ) => {
+const AllBlogs:FC = ( ) => {
     return(
         <>
             <Navigation />
