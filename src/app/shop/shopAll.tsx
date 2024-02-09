@@ -6,6 +6,7 @@ import Footer from '@ui/footer'
 import BlogPostSummary from '@ui/BlogPostSummary'
 import Header from './module/header'
 import ShopItemList from './module/shopItemList'
+import HelmetComponent from '@helmet'
 
 
 const ShopAll: FC = () => {
@@ -23,6 +24,7 @@ const ShopAll: FC = () => {
 
   return (
     <>
+      <HelmetComponent title="Knigi - All Shop Item" />
       <Navigation />
       <Header />
 

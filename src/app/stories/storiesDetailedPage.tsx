@@ -3,12 +3,14 @@ import styles from "./storiesDetailedPage.module.css"
 import Navigation from '@ui/Nav'
 import BlogPostSummary from "@ui/BlogPostSummary"
 import Footer from "@ui/footer"
+import HelmetComponent from '@helmet'
 
 
 const StoriesPage: FC = () => {
 
   return (
     <>
+      <HelmetComponent title="Knigi - Stories" />
       < Navigation />
 
       < section className={"flex flex-wrap flex-s-b " + styles.storiesSection} >

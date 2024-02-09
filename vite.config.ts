@@ -11,6 +11,7 @@ export default defineConfig({
       "@ui": `${path.resolve(__dirname, "./src/ui/")}`,
       "@template": `${path.resolve(__dirname, "./src/template/")}`,
       "@lib": `${path.resolve(__dirname, "./lib/")}`,
+      "@helmet": `${path.resolve(__dirname, "./src/helmet.tsx")}`,
     }
   }
 })

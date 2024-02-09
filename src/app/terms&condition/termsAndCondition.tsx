@@ -2,12 +2,14 @@ import { FC } from 'react'
 import styles from "./termsAndCondition.module.css"
 import Footer from "@ui/footer";
 import Navigation from "@ui/Nav";
+import HelmetComponent from '@helmet';
 
 
 const TermsAndCondition: FC = () => {
 
   return (
     <>
+      <HelmetComponent title="Knigi - Terms and Condition" />
       <Navigation />
       <section>
         <h1 className={styles.header}>TERMS & <br /> CONDITION</h1>

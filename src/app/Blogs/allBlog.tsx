@@ -5,35 +5,38 @@ import Navigation from '@ui/Nav'
 import Footer from "@ui/footer"
 import Sidebar from "@ui/sideBar"
 import Template from "@template/template"
+import HelmetComponent from '@helmet'
 
 
-const AllBlogs:FC = ( ) => {
-    return(
-        <>
-            <Navigation />
-            <section className = {styles.blogSection}>
+const AllBlogs: FC = () => {
+  return (
+    <>
+      <HelmetComponent title="Knigi-Blog" />
 
-                <h3 className = {"text-center " + styles.blogSectionHeading}>THE BLOG</h3>
-                <Template
-                    elements={[
-                        <AllBlogsPartOne/>,
-                        <Sidebar />
-                    ]}
-                />
+      <Navigation />
+      <section className={styles.blogSection}>
 
-                <div className = "page-counter-all-blogs">
-                    <div className = "page-counter-center-container center-horizontally">
-                        <div className = "page-counter-total-pages"> PAGE 1 OF 1</div>
-                        <div className = "current-page-page-counter">1</div>
-                    </div>
+        <h3 className={"text-center " + styles.blogSectionHeading}>THE BLOG</h3>
+        <Template
+          elements={[
+            <AllBlogsPartOne />,
+            <Sidebar />
+          ]}
+        />
 
-                </div>
+        <div className="page-counter-all-blogs">
+          <div className="page-counter-center-container center-horizontally">
+            <div className="page-counter-total-pages"> PAGE 1 OF 1</div>
+            <div className="current-page-page-counter">1</div>
+          </div>
 
-            </section>
+        </div>
 
-            <Footer />
-        </>
-    )
+      </section>
+
+      <Footer />
+    </>
+  )
 }
 
 export default AllBlogs;

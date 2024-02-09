@@ -1,9 +1,10 @@
 import { useState, useEffect, FC } from 'react'
 import { useParams } from "react-router-dom";
 import axios from 'axios'
-import Navigation from "../../ui/Nav"
-import Footer from "../../ui/footer"
+import Navigation from "@ui/Nav"
+import Footer from "@ui/footer"
 import styles from "./singleShopItem.module.css"
+import HelmetComponent from '@helmet';
 
 const SingleShopItem: FC = () => {
   const [cartAmount, setCartAmount] = useState<number>(1);
@@ -37,6 +38,7 @@ const SingleShopItem: FC = () => {
 
   return (
     <>
+      <HelmetComponent title={`Knigi - ${data.productTitle}`} />
       <Navigation />
       <div className={"flex flex-wrap bound-navigation flex-s-b " + styles.itemContainer}>
 
@@ -48,7 +50,7 @@ const SingleShopItem: FC = () => {
 
           <p className={styles.price_tag}>
             {/* { data.productPrice.discountedPrice === undefined ? data.productPrice.regularPrice : data.productPrice.discountedPrice }  */}
-            {"$" + price + " USD"}
+            {`$ + ${price} +  USD`}
           </p>
 
           <p className={styles.product_content}>

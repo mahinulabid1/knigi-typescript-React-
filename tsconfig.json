@@ -6,7 +6,8 @@
       "@/*": ["./src/*", "./dist/*", ""],
       "@ui/*": ["./src/ui/*"],
       "@template/*": ["./src/template/*"],
-      "@lib/*" : ["./lib/*"]
+      "@lib/*" : ["./lib/*"],
+      "@helmet" : ["./src/helmet.tsx"]
     },
     
     "target": "ES2020",

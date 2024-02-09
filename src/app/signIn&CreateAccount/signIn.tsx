@@ -2,6 +2,7 @@ import { useState, FC } from 'react';
 import Navigation from "@ui/Nav"
 import Footer from "@ui/footer"
 import styles from "./SignIn.module.css"
+import HelmetComponent from '@helmet';
 
 // const [formState, setFormState] = useState('signin');
 
@@ -118,6 +119,7 @@ const FormComponent = () => {
 
   return (
     <>
+      <HelmetComponent title="Knigi - Sign In & Sign Up" />
       <Navigation />
 
       <h1 className={styles.heading + ' text-center'}> {formText.heading} </h1>

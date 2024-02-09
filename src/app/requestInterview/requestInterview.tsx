@@ -5,11 +5,13 @@ import Navigation from "@ui/Nav";
 import Template from "@template/template";
 import Form from "./module/form";
 import Info from "./module/info";
+import HelmetComponent from '@helmet';
 
 const RequestInterView: FC = () => {
 
   return (
     <>
+      <HelmetComponent title="Knigi - Request Interview" />
       < Navigation />
 
       < section >

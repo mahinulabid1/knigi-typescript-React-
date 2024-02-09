@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import Homepage from "./app/landingPage/page"
+import Homepage from "./app/landingPage/homepage"
 import StoriesPage from "./app/stories/storiesDetailedPage"
 import ShopAll from './app/shop/shopAll';
 import AllStoriesPage from './app/stories/allStoriesPage';
@@ -10,7 +10,8 @@ import TermsAndCondition from './app/terms&condition/termsAndCondition';
 import RequestInterView from './app/requestInterview/requestInterview';
 import SingleShopItem from "./app/shop/singleShopitem";
 import FormComponent from "./app/signIn&CreateAccount/signIn";
-// git add * && git commit -m "typescript-conversion: complete conversion from javascript to typescript"
+
+
 const routeHandler = createBrowserRouter([
   {
     path: "/",

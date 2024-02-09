@@ -5,27 +5,29 @@ import styles from "./contactUs.module.css"
 import Template from "@template/template";
 import Sidebar from "@ui/sideBar";
 import Info from "./module/contactInfo";
+import HelmetComponent from '@helmet';
 
-const ContactUs:FC = ( ) => {
+const ContactUs: FC = () => {
 
-    return (
-        <>      
-            <Navigation />
-            <section>
-                <h1 className={styles.section_header}>TELL US YOUR <br /> THOUGHTS</h1>
+  return (
+    <>
+      <HelmetComponent title="Knigi - Contact Us" />
+      <Navigation />
+      <section>
+        <h1 className={styles.section_header}>TELL US YOUR <br /> THOUGHTS</h1>
 
-                <Template 
-                    elements={[
-                        <Info/>,
-                        <Sidebar />
-                    ]}
-                />
+        <Template
+          elements={[
+            <Info />,
+            <Sidebar />
+          ]}
+        />
 
-            </section>
-            
-            <Footer />
-        </>
-    )
+      </section>
+
+      <Footer />
+    </>
+  )
 }
 
 
