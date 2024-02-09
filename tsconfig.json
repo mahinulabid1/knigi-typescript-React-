@@ -5,7 +5,8 @@
     "paths": {
       "@/*": ["./src/*", "./dist/*", ""],
       "@ui/*": ["./src/ui/*"],
-      "@template/*": ["./src/template/*"]
+      "@template/*": ["./src/template/*"],
+      "@lib/*" : ["./lib/*"]
     },
     
     "target": "ES2020",
