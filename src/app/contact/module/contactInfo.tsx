@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import styles from "./contactInfo.module.css"
 
-const Info = () => {
+const Info:FC = () => {
 
     return( 
         <>
