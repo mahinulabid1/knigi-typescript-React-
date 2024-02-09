@@ -1,6 +1,7 @@
 import styles from "./css/footer.module.css"
+import { FC } from 'react'
 
-const Footer = () => {
+const Footer:FC = () => {
     return (
         <>
             <footer className={"bound-padding flex flex-s-a " + styles.footer }>

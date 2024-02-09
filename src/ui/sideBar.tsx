@@ -14,7 +14,7 @@ const Sidebar = () => {
                 <p className = "section-flex-item-p">
                     Have a story, tattoo, or dwelling, you’d like to share with us, then request an interview.
                 </p>
-                <a href="./collaborate.html" className ={styles.sideBarButton}>REQUEST AN INTERVIEW</a>
+                <a href="/requestinterview" className ={styles.sideBarButton}>REQUEST AN INTERVIEW</a>
             </div> 
         </>
     )
