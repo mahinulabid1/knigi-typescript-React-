@@ -10,6 +10,7 @@ import TermsAndCondition from './app/terms&condition/termsAndCondition';
 import RequestInterView from './app/requestInterview/requestInterview';
 import SingleShopItem from "./app/shop/singleShopitem";
 import FormComponent from "./app/signIn&CreateAccount/signIn";
+// import Test from "./app/test";
 
 
 const routeHandler = createBrowserRouter([
@@ -60,6 +61,10 @@ const routeHandler = createBrowserRouter([
     path: "/login",
     element: <FormComponent />
   },
+  // {
+  //   path: "/test",
+  //   element: <Test />
+  // }
 
 ]);
 
