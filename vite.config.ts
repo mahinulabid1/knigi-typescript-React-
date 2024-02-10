@@ -12,6 +12,7 @@ export default defineConfig({
       "@template": `${path.resolve(__dirname, "./src/template/")}`,
       "@lib": `${path.resolve(__dirname, "./lib/")}`,
       "@helmet": `${path.resolve(__dirname, "./src/helmet.tsx")}`,
+      "@store": `${path.resolve(__dirname, "./store/")}`,
     }
   }
 })

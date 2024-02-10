@@ -7,7 +7,8 @@
       "@ui/*": ["./src/ui/*"],
       "@template/*": ["./src/template/*"],
       "@lib/*" : ["./lib/*"],
-      "@helmet" : ["./src/helmet.tsx"]
+      "@helmet" : ["./src/helmet.tsx"],
+      "@store/*": ["./store/*"]
     },
     
     "target": "ES2020",
