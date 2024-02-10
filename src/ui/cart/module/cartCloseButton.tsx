@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { cartSwitch } from "../../data&functions/switch";
+import { cartSwitch } from "../../../data&functions/switch";
 import {
   setCartDisplay,
   setHamAnimation,

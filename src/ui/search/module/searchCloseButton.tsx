@@ -1,19 +1,12 @@
+import {FC} from 'react';
 import { useAppDispatch } from "@store/hooks";
-import { searchSwitch } from "../../data&functions/switch";
+// import { searchSwitch } from "../../../data&functions/switch";
 import {
-  setCartDisplay,
-  setHamAnimation,
-  setHamDisplay,
   setSearchAnimation,
   setSearchDisplay,
-  setShopAnimation,
-  setShopCloseValidation,
-  setShopDisplay,
-  setUserNavDisplay,
-  setTimeWhenNavOpened
 } from '@store/displaySlice'
 
-const SearchCloseBtn = () => {
+const SearchCloseBtn:FC = () => {
   const dispatch = useAppDispatch(); // initializing
 
   const clickHandler = () => {

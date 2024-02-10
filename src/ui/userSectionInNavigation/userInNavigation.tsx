@@ -1,5 +1,5 @@
-import styles from "./css/userInNavigation.module.css";
-import SignIn from "../module.ui/userInNavigation.SignInForm";
+import styles from "./userInNavigation.module.css";
+import SignIn from "./module/userInNavigation.SignInForm";
 // import { CookiesProvider, useCookies } from "react-cookie";
 import {  FC } from "react";
 import { useAppSelector, useAppDispatch } from "@store/hooks";

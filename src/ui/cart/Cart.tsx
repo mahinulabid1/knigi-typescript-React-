@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styles from "./cart.module.css";
-import CartCloseBtn from "../module.ui/nav.cart.CloseBtn";
+import CartCloseBtn from "./module/cartCloseButton";
 import { useAppSelector } from "@store/hooks";
 
 

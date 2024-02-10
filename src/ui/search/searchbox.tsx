@@ -1,6 +1,6 @@
 import { useAppSelector } from "@store/hooks";
 import styles from "./searchBox.module.css";
-import SearchCloseBtn from "../module.ui/nav.search.CloseBtn";
+import SearchCloseBtn from "./module/searchCloseButton";
 
 const SearchBox = () => {
   // const props = searchPropsObj.searchProps;

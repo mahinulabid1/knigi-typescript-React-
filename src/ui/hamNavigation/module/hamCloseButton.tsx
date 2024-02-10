@@ -1,15 +1,7 @@
 import { useAppDispatch, useAppSelector } from "@store/hooks";
-import { navigationSwitch } from "../../data&functions/switch";
 import {
-  setCartDisplay,
   setHamAnimation,
   setHamDisplay,
-  setSearchAnimation,
-  setSearchDisplay,
-  setShopAnimation,
-  setShopCloseValidation,
-  setShopDisplay,
-  setUserNavDisplay
 } from '@store/displaySlice'
 
 const HamNavCloseBtn = () => {
