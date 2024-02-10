@@ -1,5 +1,5 @@
 import { FC } from "react";
-import styles from "./css/hamNav.module.css";
+import styles from "./hamNav.module.css";
 import HamNavCloseBtn from "../module.ui/nav.ham.CloseBtn";
 import { useAppSelector } from "@store/hooks";
 

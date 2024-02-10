@@ -20,7 +20,7 @@ import {
   setTimeWhenNavOpened
 } from '@store/displaySlice'
 
-import style from "./css/nav.module.css";
+import style from "./nav.module.css";
 
 
 

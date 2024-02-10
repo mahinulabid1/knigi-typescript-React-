@@ -1,7 +1,7 @@
 import { useAppSelector } from "@store/hooks";
 import { useState, useEffect, FC } from "react";
 import axios from "axios"
-import styles from "./css/shopNavigation.module.css";
+import styles from "./shopNavigation.module.css";
 // import { useParams } from "react-router-dom";
 import ShopNavigationClose from "../module.ui/nav.shop.CloseBtn";
 import {
