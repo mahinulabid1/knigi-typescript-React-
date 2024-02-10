@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styles from "./css/hamNav.module.css";
-import HamNavCloseBtn from "./module.ui/nav.ham.CloseBtn";
+import HamNavCloseBtn from "../module.ui/nav.ham.CloseBtn";
 import { useAppSelector } from "@store/hooks";
 
 // Minimizing Code: Ham-navigation Links information

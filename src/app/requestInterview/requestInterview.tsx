@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import styles from "./requestInterview.module.css"
-import Footer from "@ui/footer";
-import Navigation from "@ui/Nav";
+import Footer from "@/ui/footer/footer";
+import Navigation from "@/ui/nav/Nav";
 import Template from "@template/template";
 import Form from "./module/form";
 import Info from "./module/info";

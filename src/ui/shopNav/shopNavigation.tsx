@@ -3,7 +3,7 @@ import { useState, useEffect, FC } from "react";
 import axios from "axios"
 import styles from "./css/shopNavigation.module.css";
 // import { useParams } from "react-router-dom";
-import ShopNavigationClose from "./module.ui/nav.shop.CloseBtn";
+import ShopNavigationClose from "../module.ui/nav.shop.CloseBtn";
 import {
   setCartDisplay,
   setHamAnimation,

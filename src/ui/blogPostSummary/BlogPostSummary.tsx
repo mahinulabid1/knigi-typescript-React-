@@ -1,6 +1,6 @@
 import {FC} from 'react';
 import styles from "./css/blogPostSummary.module.css";
-import { BlogPostSummaryData } from "../data&functions/dataAndFunctions";
+import { BlogPostSummaryData } from "../../data&functions/dataAndFunctions";
 
 const BlogPostSummary:FC = () => {
   return (

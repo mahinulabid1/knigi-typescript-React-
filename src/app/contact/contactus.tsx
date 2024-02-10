@@ -1,9 +1,9 @@
 import { FC } from 'react'
-import Footer from "@ui/footer";
-import Navigation from "@ui/Nav";
+import Footer from "@/ui/footer/footer";
+import Navigation from "@/ui/nav/Nav";
 import styles from "./contactUs.module.css"
 import Template from "@template/template";
-import Sidebar from "@ui/sideBar";
+import Sidebar from "@/ui/sidebar/sideBar";
 import Info from "./module/contactInfo";
 import HelmetComponent from '@helmet';
 

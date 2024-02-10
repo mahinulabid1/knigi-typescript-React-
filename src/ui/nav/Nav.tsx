@@ -1,10 +1,10 @@
 import { FC } from "react"
 import { useAppDispatch } from "@store/hooks"
-import HamNavigation from "./HamNavigation"
-import ShopNavigation from "./shopNavigation"
-import SearchBox from "./searchbox"
-import Cart from "./Cart"
-import UserInNavigation from "./userInNavigation"
+import HamNavigation from "../hamNavigation/HamNavigation"
+import ShopNavigation from "../shopNav/shopNavigation"
+import SearchBox from "../search/searchbox"
+import Cart from "../cart/Cart"
+import UserInNavigation from "../userSectionInNavigation/userInNavigation"
 
 
 import {

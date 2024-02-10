@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import styles from "./termsAndCondition.module.css"
-import Footer from "@ui/footer";
-import Navigation from "@ui/Nav";
+import Footer from "@/ui/footer/footer";
+import Navigation from "@/ui/nav/Nav";
 import HelmetComponent from '@helmet';
 
 

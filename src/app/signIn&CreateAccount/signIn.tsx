@@ -1,6 +1,6 @@
 import { useState, FC } from 'react';
-import Navigation from "@ui/Nav"
-import Footer from "@ui/footer"
+import Navigation from "@/ui/nav/Nav"
+import Footer from "@/ui/footer/footer"
 import styles from "./SignIn.module.css"
 import HelmetComponent from '@helmet';
 

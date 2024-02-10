@@ -1,9 +1,9 @@
 import { FC } from 'react'
 import styles from "./AllBlogs.module.css"
 import AllBlogsPartOne from "./module/blogsList"
-import Navigation from '@ui/Nav'
-import Footer from "@ui/footer"
-import Sidebar from "@ui/sideBar"
+import Navigation from '@/ui/nav/Nav'
+import Footer from "@/ui/footer/footer"
+import Sidebar from "@/ui/sidebar/sideBar"
 import Template from "@template/template"
 import HelmetComponent from '@helmet'
 

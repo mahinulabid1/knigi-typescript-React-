@@ -1,9 +1,9 @@
 import { useState, useEffect, FC } from 'react'
 import axios from 'axios'
 import styles from "./shopAll.module.css"
-import Navigation from '@ui/Nav'
-import Footer from '@ui/footer'
-import BlogPostSummary from '@ui/BlogPostSummary'
+import Navigation from '@/ui/nav/Nav'
+import Footer from '@/ui/footer/footer'
+import BlogPostSummary from '@/ui/blogPostSummary/BlogPostSummary'
 import Header from './module/header'
 import ShopItemList from './module/shopItemList'
 import HelmetComponent from '@helmet'

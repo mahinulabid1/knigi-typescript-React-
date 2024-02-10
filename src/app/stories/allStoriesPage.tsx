@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import Navigation from '@ui/Nav'
+import Navigation from '@/ui/nav/Nav'
 import Stories from "./stories"
-import BlogPostSummary from "@ui/BlogPostSummary"
-import Footer from "@ui/footer"
+import BlogPostSummary from "@/ui/blogPostSummary/BlogPostSummary"
+import Footer from "@/ui/footer/footer"
 import styles from "./allStoriesPage.module.css"
 import HelmetComponent from '@helmet'
 

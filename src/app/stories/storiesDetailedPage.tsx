@@ -1,8 +1,8 @@
 import { FC } from 'react'
 import styles from "./storiesDetailedPage.module.css"
-import Navigation from '@ui/Nav'
-import BlogPostSummary from "@ui/BlogPostSummary"
-import Footer from "@ui/footer"
+import Navigation from '@/ui/nav/Nav'
+import BlogPostSummary from "@/ui/blogPostSummary/BlogPostSummary"
+import Footer from "@/ui/footer/footer"
 import HelmetComponent from '@helmet'
 
 
