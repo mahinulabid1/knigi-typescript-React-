@@ -1,6 +1,11 @@
+import {FC} from 'react'
 import styles from "./template.module.css";
 
-const Template = ( {elements} ) => {
+interface ComponentProps {
+  elements: any
+}
+
+const Template:FC<ComponentProps> = ( {elements} ) => {
 
     return (
         <>

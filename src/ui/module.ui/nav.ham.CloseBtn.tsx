@@ -1,23 +1,36 @@
+import { useAppDispatch, useAppSelector } from "@store/hooks";
 import { navigationSwitch } from "../../data&functions/switch";
+import {
+  setCartDisplay,
+  setHamAnimation,
+  setHamDisplay,
+  setSearchAnimation,
+  setSearchDisplay,
+  setShopAnimation,
+  setShopCloseValidation,
+  setShopDisplay,
+  setUserNavDisplay
+} from '@store/displaySlice'
 
-const HamNavCloseBtn = ( {setDisplay, setAnimation} ) => {
-    
-    const clickHander = () =>{
-        setAnimation('slideUp')
-        //animation duration is 400ms for slideUp
-        setTimeout(() => {
-            setDisplay('d-none');
-        }, 390);
-    }
+const HamNavCloseBtn = () => {
+  const dispatch = useAppDispatch();
 
-    return (
-        <>
-        <div 
-        onClick={clickHander}>     
-            <img src = "/images/icons/close.png" alt = "" height = "20" width = "20" />
-        </div>
-        </>
-    )
+  const clickHander = () => {
+    dispatch(setHamAnimation('slideUp'))
+    //animation duration is 400ms for slideUp
+    setTimeout(() => {
+      dispatch(setHamDisplay('d-none'))
+    }, 390);
+  }
+
+  return (
+    <>
+      <div
+        onClick={clickHander}>
+        <img src="/images/icons/close.png" alt="" height="20" width="20" />
+      </div>
+    </>
+  )
 }
 
 export default HamNavCloseBtn;
