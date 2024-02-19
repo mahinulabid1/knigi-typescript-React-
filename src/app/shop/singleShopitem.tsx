@@ -19,7 +19,7 @@ const SingleShopItem: FC = () => {
         // other data are related to connection information
         const fetchedData = result.data.data.result;
         // console.log(result.data.data.result);
-        console.log(fetchedData);
+        // console.log(fetchedData);
         // console.log(result.data.productPrice.discountedPrice);
         if(fetchedData.productPrice.regularPrice) {
           price = fetchedData.productPrice.regularPrice;
@@ -40,7 +40,7 @@ const SingleShopItem: FC = () => {
 
   const decreaseAmount = ():void => {
     if (cartAmount > 0) {
-      setCartAmount(cartAmount + 1);
+      setCartAmount(cartAmount - 1);
       console.log("decreased click")
     }
   }
