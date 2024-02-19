@@ -9,7 +9,8 @@ import ContactUs from './app/contact/contactus';
 import TermsAndCondition from './app/terms&condition/termsAndCondition';
 import RequestInterView from './app/requestInterview/requestInterview';
 import SingleShopItem from "./app/shop/singleShopitem";
-import FormComponent from "./app/signIn&CreateAccount/signIn";
+import SignInComponent from "./app/signIn&CreateAccount/signIn/signIn";
+import CreateAccount from "./app/signIn&CreateAccount/createAccount/createAccount";
 // import Test from "./app/test";
 
 
@@ -59,8 +60,12 @@ const routeHandler = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <FormComponent />
+    element: <SignInComponent />
   },
+  {
+    path: "/createAccount",
+    element : <CreateAccount />
+  }
   // {
   //   path: "/test",
   //   element: <Test />
