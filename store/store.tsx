@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 import counterReducer from "./sliceExample"
 import displayReducer from './displaySlice'
+import userCacheReducer from './userCacheSlice'
 
 export const store = configureStore({  // important to remember : configureStore() returns an OBJECT
   reducer: {
     counter : counterReducer,
-    display : displayReducer 
+    display : displayReducer,
+    user: userCacheReducer 
   },
 })
 
