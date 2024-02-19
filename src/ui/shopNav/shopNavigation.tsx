@@ -4,18 +4,18 @@ import axios from "axios"
 import styles from "./shopNavigation.module.css";
 // import { useParams } from "react-router-dom";
 import ShopNavigationClose from "./module/shopCloseButton";
-import {
-  setCartDisplay,
-  setHamAnimation,
-  setHamDisplay,
-  setSearchAnimation,
-  setSearchDisplay,
-  setShopAnimation,
-  setShopCloseValidation,
-  setShopDisplay,
-  setUserNavDisplay,
-  setTimeWhenNavOpened
-} from '@store/displaySlice'
+// import {
+//   setCartDisplay,
+//   setHamAnimation,
+//   setHamDisplay,
+//   setSearchAnimation,
+//   setSearchDisplay,
+//   setShopAnimation,
+//   setShopCloseValidation,
+//   setShopDisplay,
+//   setUserNavDisplay,
+//   setTimeWhenNavOpened
+// } from '@store/displaySlice'
 
 const ShopNavigation:FC = () => {
 
@@ -26,13 +26,17 @@ const ShopNavigation:FC = () => {
 
   const [data, setData] = useState([]);
   useEffect(() => {
-    axios.get('http://localhost:8000/api/v1/shoplist?limit=4')
+    axios.get('http://localhost:8000/api/v1/shopItem?limit=4')
       .then((res) => {
-        setData(res.data);
+        const data = res.data.data.result;
+        console.log(data);
+        setData(data);
       })
   }, [])          // [] if it is empty, it will execute the firsttime it mounts
 
+
   return (
+    
     <>
       {/* <!-- SHOP NAVIGATION MENU --> */}
       <div className={`${shopNavDisplay} ${shopNavAnimation} ${styles.book_shop_separate}`}  >
@@ -44,7 +48,7 @@ const ShopNavigation:FC = () => {
 
                 <div className={styles.image_container}>
 
-                  <img className="" src={cur.productImage} alt="" />
+                  <img className="" src={cur.imageCollection.productImage.url} alt="" />
 
                   <div>
                     <p>{cur.productTitle}</p>
@@ -63,7 +67,7 @@ const ShopNavigation:FC = () => {
 
         </div>
 
-        <a className={"transition " + styles.shop_all_btn} href="./shopall.php">
+        <a className={"transition " + styles.shop_all_btn} href="./shopall">
           SHOP ALL
           <i style={{ paddingLeft: "20px" }} className="fas fa-chevron-right"></i>
         </a>
