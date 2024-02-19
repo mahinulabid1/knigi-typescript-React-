@@ -12,15 +12,24 @@ const SingleShopItem: FC = () => {
   const [price, setPrice] = useState<number>();
   let { id } = useParams(); // fetching ID parameter from URL 
   useEffect(() => {
-    axios.get(`http://localhost:8000/api/v1/shoplist?id=${id}`)
+    axios.get(`http://localhost:8000/api/v1/shopItem/${id}`)
       .then((result) => {
+        let price;
         // axios return an object where "data" field has the database data
         // other data are related to connection information
-        console.log(result.data.productPrice.discountedPrice);
-        let x = result.data.productPrice.discountedPrice;
-        setPrice(x);
-        setData(result.data);
-
+        const fetchedData = result.data.data.result;
+        // console.log(result.data.data.result);
+        console.log(fetchedData);
+        // console.log(result.data.productPrice.discountedPrice);
+        if(fetchedData.productPrice.regularPrice) {
+          price = fetchedData.productPrice.regularPrice;
+        }
+        else {
+          price = fetchedData.productPrice.discountedPrice;
+        }
+        setPrice(price);
+        setData(fetchedData);
+        
       })
   }, [])
 
@@ -50,7 +59,7 @@ const SingleShopItem: FC = () => {
 
           <p className={styles.price_tag}>
             {/* { data.productPrice.discountedPrice === undefined ? data.productPrice.regularPrice : data.productPrice.discountedPrice }  */}
-            {`$ + ${price} +  USD`}
+            {`$${price} USD`}
           </p>
 
           <p className={styles.product_content}>
@@ -77,7 +86,7 @@ const SingleShopItem: FC = () => {
 
         <div>       {/* flex item 2*/}
           <div className={styles.grey_box}>
-            <img src={data.productImage} />
+            <img src={data.imageCollection.productImage.url} />
           </div>
 
         </div>
@@ -89,8 +98,7 @@ const SingleShopItem: FC = () => {
 
           <div className={styles.specs_item}>
             <h3 className={styles.specs_item_header}>SPECS</h3>
-            <p className={styles.specs_content}>144 pages, offset-printed and perfect bound, full color on uncoated and coated paper. Printed in Germany.</p>
-            <p className={styles.specs_content}>Dimensions: 8.5 x 11.3 in</p>
+            <p className={styles.specs_content}>{data.productSpecs}</p>
           </div>
           <div className={styles.specs_item}>
             <h3 className={styles.specs_item_header}>SHIPPING &amp; HANDLING</h3>
