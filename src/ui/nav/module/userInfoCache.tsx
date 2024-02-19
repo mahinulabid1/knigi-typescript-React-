@@ -1,4 +1,9 @@
-import {FC, useEffect, useState} from 'react'
+/**
+ * an empty functional component 
+ * it simply fetches userinfo using token
+ * then update redux hooks
+ */
+import {FC, useEffect } from 'react'
 import { useAppSelector, useAppDispatch } from "@store/hooks";
 import { useCookies } from "react-cookie";
 import axios from 'axios'
