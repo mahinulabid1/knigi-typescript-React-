@@ -30,19 +30,22 @@ const CacheUser:FC = () => {
   const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJpYXQiOjE3MDgzNDQwMjd9.HOQnVO9LWFk-hMTTM0h7BIYQJVRMwlgdiAkpeV-kj9o";
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/v1/user', {headers:{Authorization: `$bearer ${token}`}}).then((res) =>{
-      const data = res.data.data;
-      // console.log(data);
-      // setDbData(res.data.data);
-      dispatch(setBirthdate(data.birthdate));
-      dispatch(setEmail(data.email));
-      dispatch(setFirstName(data.firstName));
-      dispatch(setLastName(data.lastName));
-      dispatch(setGender(data.gender));
-      dispatch(setUsername(data.username));
-      dispatch(setIsDataCached(true));
-      dispatch(setImageData(data.imageCollection))
-    })
+    if(token) {
+      axios.get('http://localhost:8000/api/v1/user', {headers:{Authorization: `$bearer ${token}`}}).then((res) =>{
+        const data = res.data.data;
+        console.log(data);
+        // setDbData(res.data.data);
+        dispatch(setBirthdate(data.birthdate));
+        dispatch(setEmail(data.email));
+        dispatch(setFirstName(data.firstName));
+        dispatch(setLastName(data.lastName));
+        dispatch(setGender(data.gender));
+        dispatch(setUsername(data.username));
+        dispatch(setIsDataCached(true));
+        dispatch(setImageData(data.imageData))
+      })
+    }
+    
   }, [])
 
   return(

@@ -1,11 +1,14 @@
 import { FC } from 'react'
-import { useAppDispatch } from '@store/hooks';
+import { useAppDispatch, useAppSelector } from '@store/hooks';
 import { setUserNavDisplay } from '@store/displaySlice'
 import styles from '../nav.module.css'
 
 
 const UserButton: FC = () => {
   const dispatch = useAppDispatch();
+  const userImage = useAppSelector((state) => state.user.imageData);
+  console.log(userImage);
+
   return (
     <>
       <div className={styles.userBtn}>
@@ -16,7 +19,13 @@ const UserButton: FC = () => {
             dispatch(setUserNavDisplay('')) 
           }} >
 
-          <img src="./images/userIcon.png" style={{ height: '40px' }} />
+          {
+            !userImage ?
+            <img className={styles.userIcon} src="./images/userIcon.png" style={{ height: '40px' }} /> 
+            :
+            <img className={styles.userImage} src={userImage.imageLink} style={{ height: '40px' }} />
+          }
+          {/* <img src="./images/userIcon.png" style={{ height: '40px' }} /> */}
 
         </div>
       </div>
