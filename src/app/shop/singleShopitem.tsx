@@ -11,18 +11,13 @@ const SingleShopItem: FC = () => {
   const [data, setData] = useState<any>(''); // setting to any for now! later I'll define class for it 
   const [price, setPrice] = useState<number>();
   let { id } = useParams(); // fetching ID parameter from URL 
-  const [image, setImage] = useState<string>('LOADING..')
   useEffect(() => {
     console.log('hello')
     axios.get(`http://localhost:8000/api/v1/shopItem/${id}`)
       .then((result) => {
         let price;
-        // axios return an object where "data" field has the database data
-        // other data are related to connection information
         const fetchedData = result.data.data.result;
         console.log(result);
-        // console.log(fetchedData);
-        // console.log(result.data.productPrice.discountedPrice);
         if(fetchedData.productPrice.regularPrice) {
           price = fetchedData.productPrice.regularPrice;
         }
@@ -36,10 +31,6 @@ const SingleShopItem: FC = () => {
   }, [])
 
 
-  useEffect(() => {
-
-  }, [image])
-
   const increaseAmount = ():void => {
     setCartAmount(cartAmount + 1);
     console.log("increase clicked")
@@ -52,7 +43,7 @@ const SingleShopItem: FC = () => {
     }
   }
 
-  if(data) {
+  if(data) { // fix: error- unable to read data due to async data loading
     return (
 
       <>
@@ -67,7 +58,6 @@ const SingleShopItem: FC = () => {
             </h2>
   
             <p className={styles.price_tag}>
-              {/* { data.productPrice.discountedPrice === undefined ? data.productPrice.regularPrice : data.productPrice.discountedPrice }  */}
               {`$${price} USD`}
             </p>
   
