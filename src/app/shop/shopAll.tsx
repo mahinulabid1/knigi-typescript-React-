@@ -13,10 +13,10 @@ const ShopAll: FC = () => {
 
   const [data, setData] = useState<any>(undefined);
   useEffect(() => {
-    axios.get('http://localhost:8000/api/v1/shoplist?limit=20')
+    axios.get('http://localhost:8000/api/v1/shopItem/')
       .then((result) => {
         // result.data contains fetched information from Database
-        console.log(result.data)
+        // console.log(result.data)
         setData(result.data);
 
       })

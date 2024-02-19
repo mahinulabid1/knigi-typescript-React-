@@ -6,10 +6,9 @@ interface ComponentProps {
 }
 
 const RegularPrice: FC<ComponentProps> = ({ data }) => {
-  console.log(data);
   return (
     <>
-      <span className={styles.regular_price}> {"$" + data.regularPrice + " USD"} </span>
+      <span className={styles.regular_price}> {"$" + data + " USD"} </span>
     </>
   )
 }

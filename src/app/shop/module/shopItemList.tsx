@@ -22,14 +22,14 @@ const ShopItemList: FC<ComponentProps> = ({ data }) => {
 
   return (
     <>
-
-      {data.map((cur:any, index:any) => { // defining any was mandatory as it was giving me error
+      {/* {console.log(data.data.result)}; */}
+      {data.data.result.map((cur:any, index:any) => { // defining any was mandatory as it was giving me error
 
         return (
           <a href={"/shopItemDetails/" + cur._id} className={styles.product_link} key={index.toString()} >
 
             < div className={styles.image_grey_box} >
-              <img className="center-middle" src={cur.productImage} alt="" />
+              <img className="center-middle" src={cur.imageCollection.productImage.url} alt="" />
             </div>
 
             <div className={styles.product_text}>
