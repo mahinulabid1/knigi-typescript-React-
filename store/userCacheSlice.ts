@@ -49,7 +49,7 @@ export const userCacheInfo = createSlice({
     },
 
     setGender : (state:any, action:PayloadAction<string>):void => {
-      state.firstName = action.payload;
+      state.gender = action.payload;
     },
 
     setImageData : (state:any, action:PayloadAction<string>):void => {
