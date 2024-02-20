@@ -8,6 +8,7 @@
 
 }
 
+
 .formContainer {
   width: 400px;
   position: relative;
@@ -64,4 +65,36 @@
 .formExtraLink a, 
 .formExtraLink button{ 
   font-size: 15px;
+}
+
+
+
+
+/* CREATE ACCOUNT FORM */
+.createAccountForm select {
+  border: 1px solid rgba(0, 0, 0, 0.233);
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  height : 58px;
+  width: 100%;
+  margin-bottom :10px;
+  padding: 5px 20px;
+  border-radius: 10px;
+  background: none;
+  color:#000000a6;
+}
+
+.createAccountForm select:focus{
+  outline: none;
+}
+
+
+.createAccountForm select::after{
+  border:none;
+}
+
+
+
+.createAccountForm select option{
+  border:none;
 }
