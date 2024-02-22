@@ -9,8 +9,8 @@ import ContactUs from './app/contact/contactus';
 import TermsAndCondition from './app/terms&condition/termsAndCondition';
 import RequestInterView from './app/requestInterview/requestInterview';
 import SingleShopItem from "./app/shop/singleShopitem";
-import SignInComponent from "./app/signIn&CreateAccount/signIn/signIn";
-import CreateAccount from "./app/signIn&CreateAccount/createAccount/createAccount";
+import SignInComponent from "./app/signInAndCreateAccount/signIn/signIn";
+import CreateAccount from "./app/signInAndCreateAccount/createAccount/createAccount";
 // import Test from "./app/test";
 
 
