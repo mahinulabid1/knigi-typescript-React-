@@ -1,7 +1,7 @@
 /**
  * an empty functional component 
  * it simply fetches userinfo using token
- * then update redux hooks
+ * then update redux hooks therefore acts as cache data
  */
 import {FC, useEffect } from 'react'
 import { useAppSelector, useAppDispatch } from "@store/hooks";
@@ -26,8 +26,8 @@ const CacheUser:FC = () => {
 
   const isDataCached = useAppSelector((state) => state.user.isDataCached);
   console.log(isDataCached)
-  // const token = cookies.token;
-  const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJpYXQiOjE3MDgzNDQwMjd9.HOQnVO9LWFk-hMTTM0h7BIYQJVRMwlgdiAkpeV-kj9o";
+  const token = cookies.token;
+  // const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJpYXQiOjE3MDgzNDQwMjd9.HOQnVO9LWFk-hMTTM0h7BIYQJVRMwlgdiAkpeV-kj9o";
 
   useEffect(() => {
     if(token) {
