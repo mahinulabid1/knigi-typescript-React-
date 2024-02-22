@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Store } from "@reduxjs/toolkit";
-import { userInfo } from "os";
+// import { Store } from "@reduxjs/toolkit";
+// import { userInfo } from "os";
 
 
 interface TypeUserInfo {
@@ -16,13 +16,13 @@ interface TypeUserInfo {
 
 const initialState:TypeUserInfo = {
   isDataCached:false,
-  birthdate: 'null',
-  email:"null",
-  firstName: 'null',
-  lastName: 'null',
-  gender: 'null',
-  imageData: 'null',
-  username: 'null'
+  birthdate: '',
+  email:"",
+  firstName: '',
+  lastName: '',
+  gender: '',
+  imageData: '',
+  username: ''
 }
 
 export const userCacheInfo = createSlice({

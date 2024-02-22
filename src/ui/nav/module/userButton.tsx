@@ -7,7 +7,7 @@ import styles from '../nav.module.css'
 const UserButton: FC = () => {
   const dispatch = useAppDispatch();
   const userImage = useAppSelector((state) => state.user.imageData);
-  console.log(userImage);
+  console.log(`this is user image ${userImage}`);
 
   return (
     <>
