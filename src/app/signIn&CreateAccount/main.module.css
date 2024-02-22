@@ -98,3 +98,10 @@
 .createAccountForm select option{
   border:none;
 }
+
+/* input form error message */
+.errorMessage{
+  color :red;
+  font-size: 15px; 
+  margin-bottom : 15px;
+}

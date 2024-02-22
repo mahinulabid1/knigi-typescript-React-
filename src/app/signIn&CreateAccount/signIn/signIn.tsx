@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import Navigation from "@/ui/nav/Nav"
 import Footer from "@/ui/footer/footer"
 import styles from "../main.module.css"
@@ -9,6 +9,7 @@ import {
   setSignInUsername,
 } from "@store/userFormInputSlice";
 
+
 // const [formState, setFormState] = useState('signin');
 
 // sign in form component
@@ -16,7 +17,28 @@ const Form: FC = () => {
   const dispatch = useAppDispatch()
   const username = useAppSelector((state) => state.input.signInUsername);
   const password = useAppSelector((state) => state.input.signInPassword);
+  
 
+  // Error display state
+  const [usernameErrDisplay, setUsernameErrDisplay] = useState<string>('d-none');
+  const [passErrDisplay, setPassErrDisplay] = useState<string>('d-none');
+
+  const formValidation = ():void => {
+    const trimUsername = username.trim();
+    const trimPassword = password.trim();
+
+    if(trimUsername === '') {
+      setUsernameErrDisplay('');
+    }else {
+      setUsernameErrDisplay('d-none');
+    }
+
+    if(trimPassword === '') {
+      setPassErrDisplay('');
+    } else {
+      setPassErrDisplay('d-none');
+    }
+  }
 
   return (
     <>
@@ -29,7 +51,7 @@ const Form: FC = () => {
             dispatch(setSignInUsername(event.target.value)) 
           }}
         />
-
+        <p className={`${styles.errorMessage} ${usernameErrDisplay}`}>Username is missing! 👆</p>
 
         <input
           type="password"
@@ -39,10 +61,19 @@ const Form: FC = () => {
             dispatch(setSignInPassword(event.target.value)) 
           }}
         />
+        <p className={`${styles.errorMessage} ${passErrDisplay}`}>Can't login without password 😔</p>
 
       </form>
 
-      <button className={styles.submit + " transition"}>Sign In</button>
+      <button 
+      className={styles.submit + " transition"}
+      onClick = {(event) => {
+        event.preventDefault();
+        formValidation();
+      }}
+      >
+        Sign In
+      </button>
 
     </>
   )

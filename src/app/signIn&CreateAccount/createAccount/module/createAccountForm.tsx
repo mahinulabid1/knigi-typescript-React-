@@ -12,6 +12,7 @@ import {
   setSignUpPassword,
   setSignUpUsername
 } from "@store/userFormInputSlice";
+import validateEmail from "@lib/emailValidationRegex"
 
 const CreateAccountForm: FC = () => {
   const dispatch =useAppDispatch();
