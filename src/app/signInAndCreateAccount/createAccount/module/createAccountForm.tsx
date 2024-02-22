@@ -1,6 +1,7 @@
 import {FC, useState} from "react"
 import styles from "../../main.module.css";
 import { useAppDispatch, useAppSelector } from "@store/hooks";
+import axios from "axios"
 import {
   setSignInPassword,
   setSignInUsername,
@@ -43,7 +44,7 @@ const CreateAccountForm: FC = () => {
   }
 
 
-  const validationHandler = ():void => {
+  const showInputError = ():void => {
     const {trimFirstName, trimLastName, trimEmail, trimUserName} = trimInput();
     trimFirstName === '' ? setFirstNameErr('') : setFirstNameErr('d-none');
     trimEmail === '' ? setEmailErr(''): setEmailErr('d-none');
@@ -53,6 +54,43 @@ const CreateAccountForm: FC = () => {
     birthdate === '' ? setBirthdateErr(''): setBirthdateErr('d-none');
     gender === '' || gender === 'selectOne' ? setGenderErr('') :  setGenderErr('d-none');
     validateEmail(trimEmail) === false ? setEmailErr(''): setEmailErr('d-none');
+  }
+
+  const validationHandler = ():boolean => {
+    const {trimFirstName, trimLastName, trimEmail, trimUserName} = trimInput();
+    const arr = [trimFirstName, trimLastName, trimEmail, trimUserName, password, birthdate, gender];
+
+    for(let i = 0; i < arr.length; i++) {
+      if(arr[i] === '') {
+        return false
+      }
+    }
+    if(validateEmail(trimEmail) === false) {
+      return false;
+    }
+
+    return true;
+  }
+
+
+  const submitHandler = ():void => {
+    if(validationHandler()) {
+      axios.post(
+        "http://localhost:8000/api/v1/newUser",
+        {
+          firstName: firstName,
+          lastName: lastName,
+          email: email,
+          birthdate: birthdate,
+          username:username,
+          gender: gender,
+          password: password,
+          userRole: 'user'
+        }
+      ).then((res) => {
+        console.log(res);
+      })
+    }
   }
 
   return (
@@ -132,7 +170,10 @@ const CreateAccountForm: FC = () => {
 
       <button
         className={styles.submit + " transition"}
-        onClick = {validationHandler}
+        onClick = {()=>{
+          showInputError();
+          submitHandler();
+        }}
       >
         Create new Account
       </button>

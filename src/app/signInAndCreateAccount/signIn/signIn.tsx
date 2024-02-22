@@ -1,19 +1,21 @@
-import { FC, useState } from 'react';
+import { FC, useState, useEffect } from 'react';
 import Navigation from "@/ui/nav/Nav"
 import Footer from "@/ui/footer/footer"
 import styles from "../main.module.css"
 import HelmetComponent from '@helmet';
 import { useAppDispatch, useAppSelector } from '@store/hooks';
+import { useCookies } from 'react-cookie'
 import {
   setSignInPassword,
   setSignInUsername,
 } from "@store/userFormInputSlice";
-
+import axios from "axios"
 
 // const [formState, setFormState] = useState('signin');
 
 // sign in form component
 const Form: FC = () => {
+  const [cookies, setCookies, removeCookies] = useCookies(['token']);
   const dispatch = useAppDispatch()
   const username = useAppSelector((state) => state.input.signInUsername);
   const password = useAppSelector((state) => state.input.signInPassword);
@@ -23,21 +25,30 @@ const Form: FC = () => {
   const [usernameErrDisplay, setUsernameErrDisplay] = useState<string>('d-none');
   const [passErrDisplay, setPassErrDisplay] = useState<string>('d-none');
 
-  const formValidation = ():void => {
+  const formValidation = ():boolean => {
     const trimUsername = username.trim();
     const trimPassword = password.trim();
-
-    if(trimUsername === '') {
-      setUsernameErrDisplay('');
-    }else {
-      setUsernameErrDisplay('d-none');
+    trimUsername === '' ? setUsernameErrDisplay('') : setUsernameErrDisplay('d-none')
+    trimPassword === '' ? setPassErrDisplay('') : setPassErrDisplay('d-none');
+    if(trimPassword === '' || trimUsername === ''){
+      return false; // false on not valid
     }
-
-    if(trimPassword === '') {
-      setPassErrDisplay('');
-    } else {
-      setPassErrDisplay('d-none');
+    else {
+      return true;
     }
+  }
+
+  const submitHandler = () => {
+    axios.post(
+      'http://localhost:8000/api/v1/login',
+      {
+        username: username,
+        password: password
+      }
+    ).then((res) =>{
+      console.log(res.data.token);
+      setCookies('token', res.data.token);
+    })
   }
 
   return (
@@ -67,7 +78,10 @@ const Form: FC = () => {
 
       <button 
       className={styles.submit + " transition"}
-      onClick = {formValidation}
+      onClick = {() => {
+        formValidation();
+        submitHandler();
+      }}
       >
         Sign In
       </button>
