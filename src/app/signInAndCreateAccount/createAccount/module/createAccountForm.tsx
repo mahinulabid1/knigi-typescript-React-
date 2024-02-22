@@ -105,9 +105,9 @@ const CreateAccountForm: FC = () => {
         <p className={`${styles.errorMessage} ${usernameErr}`}>Username is missing 😔</p>
 
         <input
-          type="text"
+          type="date"
           key={6}
-          placeholder='birthdate dd-mm-yyyy'
+          // placeholder='birthdate dd-mm-y'
           name="birthdate"
           onChange ={(event) => { dispatch(setSignUpBirthdate(event.target.value)) }}
         />
