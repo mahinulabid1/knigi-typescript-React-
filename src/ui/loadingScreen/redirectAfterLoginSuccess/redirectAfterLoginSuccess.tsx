@@ -1,11 +1,22 @@
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import styles from "./loadingScreen.module.css"
 
 interface ComponentProps {
-  message: string
+  message: string,
+  redirectTo: string
 }
 
-const LoadingScreen: FC<ComponentProps> = ({ message }) => {
+const RedirectAfterLoginSuccess: FC<ComponentProps> = ({ message, redirectTo }) => {
+  const navigate = useNavigate();
+
+  useEffect(()=>{
+    setTimeout(()=>{
+      navigate(redirectTo);
+    }, 5000)
+  }, [])
+
+
   return (
     <>
       <div className={styles.container}>
@@ -26,4 +37,4 @@ const LoadingScreen: FC<ComponentProps> = ({ message }) => {
   )
 }
 
-export default LoadingScreen;
+export default RedirectAfterLoginSuccess;
