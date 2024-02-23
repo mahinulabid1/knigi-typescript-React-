@@ -1,43 +1,20 @@
-import { FC, useEffect, useState } from "react"
-// import { useAppDispatch, useAppSelector } from "@store/hooks"
+import { FC } from "react"
 import HamNavigation from "../hamNavigation/HamNavigation"
 import ShopNavigation from "../shopNav/shopNavigation"
 import SearchBox from "../search/searchbox"
 import Cart from "../cart/Cart"
 import UserInNavigation from "../userSectionInNavigation/userInNavigation"
-import CacheUser from "./module/userInfoCache"
+import CacheUser from "../../app/cacheUserInfo/userInfoCache"
 
 import HamBarButton from "./module/hamBarButton"
 import ShopButton from "./module/shopButton"
 import UserButton from "./module/userButton"
 import SearchButton from "./module/searchButton"
 import CartButton from "./module/cartButton"
-
-
-// import {
-//   setCartDisplay,
-//   setHamAnimation,
-//   setHamDisplay,
-//   setSearchAnimation,
-//   setSearchDisplay,
-//   setShopAnimation,
-//   setShopCloseValidation,
-//   setShopDisplay,
-//   setUserNavDisplay,
-//   setTimeWhenNavOpened
-// } from '@store/displaySlice'
-
-
-
 import styles from "./nav.module.css";
-import { useAppSelector } from "@store/hooks"
-
-
 
 
 const Navigation: FC = () => {
-
-
 
   return (
     <>

@@ -9,7 +9,7 @@ const InvalidRoute: FC = () => {
   useEffect(() => {
     setTimeout(()=>{
       navigate('/')
-    }, 6000 ) 
+    }, 4000 ) 
   }, [])
 
   return (
