@@ -11,6 +11,12 @@ import RequestInterView from './app/requestInterview/requestInterview';
 import SingleShopItem from "./app/shop/singleShopitem";
 import SignInComponent from "./app/signInAndCreateAccount/signIn/signIn";
 import CreateAccount from "./app/signInAndCreateAccount/createAccount/createAccount";
+
+import InvalidRoute from "@ui/invalidRoute/invalidRouteScreen";
+
+
+import RedirectAfterLoginSuccess from "@ui/loadingScreen/redirectAfterLoginSuccess/redirectAfterLoginSuccess";
+import ProtectSignInAndSignOutRoute from "@ui/protectRoute/signInAndSIgnOutProtect";
 // import Test from "./app/test";
 
 
@@ -65,11 +71,24 @@ const routeHandler = createBrowserRouter([
   {
     path: "/createAccount",
     element : <CreateAccount />
-  }
-  // {
-  //   path: "/test",
-  //   element: <Test />
-  // }
+  },
+  {
+    path: "/test",
+    element: <ProtectSignInAndSignOutRoute />
+  },
+  {
+    path: '/loginSuccess',
+    element: <RedirectAfterLoginSuccess message="Login Success! Redirecting to Homepage" redirectTo='/' />
+  },
+  {
+    path: '/alreadyLoggedIn',
+    element : <ProtectSignInAndSignOutRoute />
+  },
+  {
+    path: '/*',
+    element: <InvalidRoute/>
+  },
+  
 
 ]);
 
