@@ -1,8 +1,16 @@
-import {FC} from "react" 
+import {FC , useEffect} from "react" 
 import styles from "./signInAndSignOutProtect.module.css"
+import { useNavigate } from "react-router-dom"
 
 
 const ProtectSignInAndSignOutRoute:FC = () => {
+  const navigate = useNavigate();
+  useEffect(()=>{
+    setTimeout(() => {
+      navigate('/');
+    }, 6000)
+  }, [])
+
   return(
     <>
       <section className={styles.container}>
