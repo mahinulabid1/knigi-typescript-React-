@@ -48,8 +48,11 @@ const Form: FC = () => {
       console.log(res.data.token);
       console.log(res)
       setCookies('token', res.data.token);
-      navigate('/')
-      
+
+      setTimeout(() => {
+        navigate('/loginSuccess');
+      }, 3000)
+
     }).catch((err) => {
       console.log(err)
       setWrongCredErrDisplay('');
